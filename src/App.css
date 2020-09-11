@@ -1,38 +1,418 @@
-.App {
-  text-align: center;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  background: #006937;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 425px) {
+  .header-container {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+  }
+  .header-select-wrapper {
+    overflow: hidden;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+  }
+  .place-container {
+    margin-top: 60px;
+  }
+  .place-text {
+    font-size: 24px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@media only screen and (min-width: 426px) {
+  .header-home {
+    width: 75px;
+    height: 70px;
+    text-align: center;
+    font-size: 45px;
+    color: white;
+  }
+  .header-image-wrapper {
+    width: 75px;
+    height: 65px;
+    text-align: center;
+  }
+}
+
+.header-home {
+  width: 75px;
+  height: 50px;
+  text-align: center;
+  font-size: 36px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header-image-wrapper {
+  width: 75px;
+  height: 50px;
+  margin-top: 2px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header-image {
+  height: 85%;
+}
+
+.header-hole {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+}
+
+.header-select-wrapper {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background: #006936ab;
+}
+
+.header-select-course {
+  margin: 0px 20px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.header-select-course:hover {
+  color: black;
+}
+
+.place-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  background: #23885a;
+  background-image: linear-gradient(135deg, #23885a, #006937);
+}
+
+.place-wrapper {
+  margin: 100px 0px 100px 0px;
+}
+
+@media only screen and (min-width: 426px) {
+  .place-text {
+    font-size: 40px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.place-text {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.course-image {
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 769px) {
+  .course-image {
+    max-height: 100%;
   }
+}
+
+.course-right {
+  border: 1px solid green;
+}
+
+.course-right-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 5px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+}
+
+.course-right-item-ob {
+  margin-bottom: 5px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+}
+
+.course-info-left {
+  margin: 0px 10px;
+}
+
+.course-info-right {
+  margin: 0px 10px;
+}
+
+.course-info-right-text {
+  width: 100%;
+  text-align: left;
+  margin: 0px 10px;
+}
+
+.course-info-left-ob {
+  text-align: left;
+  margin-top: 5px;
+  margin-left: 10px;
+  font-weight: 700;
+  color: red;
+}
+
+.course-info-left-ob-b {
+  font-weight: 700;
+  color: black;
+}
+
+.course-info-right-ob {
+  text-align: left;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.course-test-container {
+  position: relative;
+  max-width: 940px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+
+.course-test-wrapper {
+  margin: 0 auto;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto auto;
+}
+
+.course-test-title {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.course-test-info {
+  display: flex;
+  margin: 20px 10px;
+  padding: 20px 0px;
+  align-items: flex-start;
+}
+
+.course-test-image {
+  
+  /* border: 1px solid red; */
+}
+
+.course-test-text {
+  min-width: 210px;
+  margin-left: 0px;
+  padding-left: 30px;
+  /* border: 1px solid red; */
+}
+
+@media only screen and (max-width: 769px) {
+  .course-test-text {
+    padding-left: 15px;
+  }
+}
+
+.course-right-item-hide {
+  display: none !important;
+}
+
+.btn-more-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background: #23885a;
+  color: white;
+  border-radius: 4px;
+}
+
+.course-test-container-info {
+  position: relative;
+  max-width: 940px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.course-test-info-info {
+  display: flex;
+  justify-content: center;
+  margin: 20px 10px 0px 10px;
+  padding: 20px 0px;
+  align-items: flex-start;
+}
+
+@media only screen and (min-width: 322px) and (max-width: 767px) {
+  .course-test-info-info {
+      display: grid;
+      margin-top: 30px;
+  }
+  .course-test-text-info {
+    margin: 30px auto 0px;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .course-test-info-info {
+    display: grid;
+    margin-top: 30px;
+  }
+  .course-image-big {
+    height: 90%;
+    width: 90%;
+  }
+  .course-image {
+    height: 120%;
+    width: 120%;
+  }
+  .course-test-text-info {
+    margin: 30px 10px 0px 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .course-test-text-info {
+    padding-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .course-test-image-info {
+    margin-top: 30px;
+  }
+}
+
+.course-test-image-info {
+  margin-right: 0px;
+}
+
+.course-test-text-info {
+  width: 280px;
+}
+
+.tips-container {
+  position: relative;
+  margin: 30px 20px 100px 20px;
+}
+
+.tips-wrapper {
+  display: flex;
+}
+
+.noob-tips {
+  height: 50px;
+  width: 50%;
+  margin-right: 5px;
+  background: #23885a;
+  color: white;
+  border: 1px solid #23885a;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.noob-tips:focus {
+    background: #006937;
+    outline: none;
+}
+
+.pro-tips {
+  height: 50px;
+  width: 50%;
+  background: #23885a;
+  color: white;
+  border: 1px solid #23885a;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pro-tips:focus {
+  background: #006937;
+  outline: none;
+}
+
+.tips-text {
+  text-align: left;
+}
+
+.gray-bg {
+  background: lightgrey;
+}
+
+
+.footer-container {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  background: #006937;
+  border-radius: 0px 0px 34px 34px;
+}
+
+@media only screen and (min-width: 426px) {
+  .footer-container {
+    display: none !important;
+  }
+} 
+
+.footer-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 65px;
+  text-align: center;
+  margin: 0px 10px;
+}
+
+
+.footer-image {
+  height: 40%;
+}
+
+.prev-course {
+  margin-left: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.next-course {
+  margin-right: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.footer-back-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: #006937;
+  color: white;
+}
+
+.scrollTop {
+  font-size: 40px;
 }

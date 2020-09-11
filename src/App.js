@@ -1,24 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import Home from './Views/Home'
+import Course from './Views/Course'
+import FagervikHome from './Views/FagervikHome'
+// import NccHome from './Views/NccHome'
+import FagervikCourse from './Views/FagervikCourse';
+import TestData from './Components/TestData'
 
 function App() {
+  console.log(TestData.Sticksjo)
+  console.log(TestData.Fagervik)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+              <Route path="/sticksjo/course/:slug" element={<Course />} />
+            <Route path="/fagervik" element={<FagervikHome />} />
+              <Route path="/fagervik/course/:slug" element={<FagervikCourse />} />
+            {/* <Route path="/ncc" element={<NccHome />} /> */}
+          </Routes>
+      </Router>
     </div>
   );
 }
