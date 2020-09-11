@@ -1,3 +1,7 @@
+Min första hemsida i React js.
+
+En hemsida för att visa en eller flera discgolfbanor på. Om man klickar på "korgen" uppe till höger så får man välja vilken bana man vill se. Just nu är det demobilder samt text, då jag väntar på riktiga bilder och text.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
